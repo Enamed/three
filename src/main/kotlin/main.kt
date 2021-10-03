@@ -6,22 +6,17 @@ fun main() {
 
 }
 
-fun agoToText(x: Int) {
-    // val davno = if(259201 >= 259201)
-//val minutes = x/60
-    val hour = x / 3600
-    // val ggg = hourReplace(x)
-    when (x) {
+fun agoToText(input: Int) {
 
+    //val hour = input / 3600
+    when (input) {
         in 0..60 -> println("Только что")
-        in 61..3600 -> hourReplace(x)
-        in 3601..86400 -> hourReplaceLong(x)
+        in 61..3600 -> hourReplace(input)
+        in 3601..86400 -> hourReplaceLong(input)
         in 86401..172800 -> println("Сегодня")
         in 172801..259200 -> println("Вчера")
         in 259201..Integer.MAX_VALUE -> println("Давно")
-
     }
-
 }
 
 fun hourReplace(sec: Int) {
